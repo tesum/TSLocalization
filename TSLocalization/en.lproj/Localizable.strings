@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  TSLocalization
+
+  Created by apple on 13.02.2024.
+  
+*/
+
+"Open.Settings" = "Open settigns";
+"Settings.Title" = "Languages";
+"Back.Button" = "Back";
