@@ -9,7 +9,7 @@ import Foundation
 
 class PresentationStrings: ObservableObject {
   @Published
-  var primaryCommponent: PresentationStringsComponent
+  var commponent: PresentationStringsComponent
 
   static let defaultLnaguageSupported: LanguageSupported = .en
 
@@ -41,15 +41,15 @@ class PresentationStrings: ObservableObject {
   //  )
 
   init(primaryCommponent: PresentationStringsComponent) {
-    self.primaryCommponent = primaryCommponent
+    self.commponent = primaryCommponent
   }
 
   func get(value: String) -> String {
-    return primaryCommponent.dict[value] ?? "Unknown"
+    return commponent.dict[value] ?? "Unknown"
   }
 
   func changeLocalization(to language: LanguageSupported) {
-    self.primaryCommponent = PresentationStringsComponent(
+    self.commponent = PresentationStringsComponent(
       languageCode: language.rawValue,
       localizedName: language.fullName,
       dict: NSDictionary(
