@@ -30,21 +30,22 @@ class PresentationStrings: ObservableObject {
 
   // MARK: Mock
   //  let downloadPresentationStrings = PresentationStrings(
-  //    primaryCommponent: PresentationStringsComponent(
+  //    commponent: PresentationStringsComponent(
   //      languageCode: "custom",
-  //      localizedName: "LOL",
+  //      localizedName: "By backend team",
   //      dict: [
-  //        "Fact.Title": "РАНТАЙМ 😯",
-  //        "Button.Default": "Не нажимать!!"
+  //        "Fact.Title": "Flexed fact title",
+  //        "Button.Default": "changed form backend"
   //      ]
   //    )
   //  )
 
-  init(primaryCommponent: PresentationStringsComponent) {
-    self.commponent = primaryCommponent
+  init(commponent: PresentationStringsComponent) {
+    self.commponent = commponent
   }
 
   func get(value: String) -> String {
+    // TODO: get(value:) to priate and use default localize
     return commponent.dict[value] ?? "Unknown"
   }
 
@@ -68,7 +69,7 @@ class PresentationStrings: ObservableObject {
   //  // MARK: When installation
   //  func saveLocalization(_ component: PresentationStringsComponent) {
   //    do {
-  //      var defaultComp = defaultPresentationStrings.primaryCommponent
+  //      var defaultComp = defaultPresentationStrings.commponent
   //      var copyDict = component.dict
   //      component.dict = defaultComp.dict
   //      copyDict.forEach { (key: String, value: String) in

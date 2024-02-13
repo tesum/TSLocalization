@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+extension PresentationStrings {
+  /// Here generate properties of strings
+}
